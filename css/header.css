@@ -3,7 +3,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 38px 48px;
   position: relative;
 }
@@ -12,6 +12,14 @@ header {
   display: inline-block;
   width: 68px;
   height: 64px;
+}
+
+.logo-mobile {
+  display: block;
+}
+
+.logo-desktop {
+  display: none;
 }
 
 .navegacao-menu {
@@ -42,4 +50,60 @@ nav {
 .list-links li a {
   color: var(--text-secondary-color);
   text-decoration: none;
+  font-weight: var(--menu-text-weight);
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .navegacao-menu {
+    margin-top: 0;
+    width: 467px;
+  }
+
+  .navegacao-menu label {
+    display: none;
+  }
+
+  .navegacao-menu nav {
+    display: block;
+  }
+
+  .navegacao-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navegacao-menu li {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 28px 120px;
+  }
+
+  .logo {
+    width: 260px;
+    height: 64px;
+  }
+  .logo-desktop {
+    display: block;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .navegacao-menu a:hover {
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    padding: 38px 160px;
+  }
 }
