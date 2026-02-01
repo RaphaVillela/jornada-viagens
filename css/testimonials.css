@@ -39,4 +39,8 @@
   .testimonial-container {
     flex-direction: row;
   }
+
+  .testimonial-container header {
+    padding: 28px;
+  }
 }
